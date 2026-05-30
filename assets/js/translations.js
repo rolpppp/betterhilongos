@@ -1,5 +1,5 @@
 /**
- * Better Solano - Enhanced Translation System
+ * Better Hilongos - Enhanced Translation System
  * Supports: English (en), Filipino (fil), Ilocano (ilo)
  * Updated: 2025-12-10
  */
@@ -24,7 +24,7 @@ const translations = {
 
     // Statistics Page
     'stats-title': 'Municipal Statistics',
-    'stats-subtitle': 'Data and statistics about Solano, Nueva Vizcaya',
+    'stats-subtitle': 'Data and statistics about Hilongos, Leyte',
     'stats-demographics': 'Demographics Overview',
     'stats-economic': 'Economic Indicators',
     'stats-barangay': 'Population by Barangay',
@@ -50,16 +50,16 @@ const translations = {
     'breadcrumb-terms': 'Terms of Use',
 
     // Hero Section
-    'hero-welcome': 'Welcome to BetterSolano.org',
+    'hero-welcome': 'Welcome to BetterHilongos.org',
     'hero-subtitle':
-      'Access government services, information, and resources for the people of Solano, Nueva Vizcaya.',
+      'Access government services, information, and resources for the people of Hilongos, Leyte.',
     'hero-browse': 'Browse Services',
     'hero-contact': 'Contact Us',
     'hero-search-placeholder': 'Search for services...',
     'hero-find-service': 'Find a Service',
 
     // Appointment CTA
-    'appointment-cta-heading': "Enhancing Appointment Services of LGU Solano Mayor's Office",
+    'appointment-cta-heading': "Enhancing Appointment Services of LGU Hilongos Mayor's Office",
     'appointment-cta-subtitle': 'No lines. No back-and-forth. Just efficient appointments.',
     'appointment-schedule-btn': 'Schedule Appointment',
     'appointment-create-btn': 'Create Account',
@@ -110,16 +110,16 @@ const translations = {
     'contact-directions': 'Get Directions',
 
     // Footer
-    'footer-title': 'Better Solano',
+    'footer-title': 'Better Hilongos',
     'footer-desc':
-      'A service-first information portal for the Municipality of Solano, Nueva Vizcaya.',
+      'A service-first information portal for the Municipality of Hilongos, Leyte.',
     'footer-quick-links': 'Quick Links',
     'footer-all-services': 'All Services',
     'footer-officials': 'Officials',
     'footer-contact-us': 'Contact Us',
     'footer-faq': 'FAQ',
     'footer-contact': 'Contact',
-    'footer-copyright': 'Better Solano. All rights reserved.',
+    'footer-copyright': 'Better Hilongos. All rights reserved.',
     'accessibility-statement': 'Accessibility Statement',
     'footer-privacy': 'Privacy Policy',
     'footer-terms': 'Terms of Use',
@@ -129,7 +129,7 @@ const translations = {
 
     // Services Page
     'services-title': 'Municipal Services Directory',
-    'services-subtitle': 'Browse all services offered by the Municipality of Solano',
+    'services-subtitle': 'Browse all services offered by the Municipality of Hilongos',
     'search-placeholder': 'Search services...',
     'search-no-results': 'No services found',
     'search-try-different': 'Try different keywords or browse categories below',
@@ -207,7 +207,7 @@ const translations = {
 
     // Certificates Page - Service Items
     'cert-birth': 'Birth Certificate',
-    'cert-birth-desc': 'Get a certified copy of birth certificate registered in Solano',
+    'cert-birth-desc': 'Get a certified copy of birth certificate registered in Hilongos',
     'cert-marriage': 'Marriage Certificate',
     'cert-marriage-desc': 'Register or request certified true copy of marriage certificate',
     'cert-death': 'Death Certificate',
@@ -259,11 +259,11 @@ const translations = {
     'health-stat-hospitals': 'Major Hospitals',
     'health-stat-bhs': 'Barangay Health Stations',
     'health-stat-mho': 'Municipal Health Office',
-    'health-section-hospitals': 'Hospitals in Solano',
+    'health-section-hospitals': 'Hospitals in Hilongos',
     'health-section-mho': 'Municipal Health Office',
     'health-section-bhs': 'Barangay Health Stations',
-    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Solano',
-    'health-mho-title': 'Solano Municipal Health Office',
+    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Hilongos',
+    'health-mho-title': 'Hilongos Municipal Health Office',
     'health-mho-desc':
       'The Municipal Health Office provides primary healthcare services including a lying-in facility and laboratory services. It serves as the main public health center for the municipality.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -289,7 +289,7 @@ const translations = {
 
     // Ordinance Framework Page
     'ord-page-title': 'Ordinance Framework',
-    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Hilongos',
     'ord-page-badge': 'Legislative',
     'ord-what-is': 'What is an Ordinance?',
     'ord-what-is-p1':
@@ -304,7 +304,7 @@ const translations = {
     'ord-cat-traffic': 'Traffic & Transportation',
     'ord-cat-zoning': 'Zoning & Land Use',
     'ord-2025-title': '2025 Ordinances',
-    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Solano in 2025',
+    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Hilongos in 2025',
     'ord-table-number': 'Ordinance No.',
     'ord-table-title': 'Title',
     'ord-table-date': 'Session Date',
@@ -312,7 +312,7 @@ const translations = {
 
     // Resolution Framework Page
     'reso-page-title': 'Resolution Framework',
-    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Hilongos',
     'reso-page-badge': 'Legislative',
     'reso-what-is': 'What is a Resolution?',
     'reso-what-is-p1':
@@ -327,7 +327,7 @@ const translations = {
     'reso-type-authorization': 'Authorization',
     'reso-type-appropriation': 'Appropriation',
     'reso-2025-title': '2025 Resolutions',
-    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Solano in 2025',
+    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Hilongos in 2025',
     'reso-table-number': 'Resolution No.',
     'reso-table-title': 'Title',
     'reso-table-date': 'Session Date',
@@ -335,7 +335,7 @@ const translations = {
 
     // Business Services Page
     'biz-page-title': 'Business Services',
-    'biz-page-desc': 'Permits, licenses, and support for businesses in Solano',
+    'biz-page-desc': 'Permits, licenses, and support for businesses in Hilongos',
     'biz-page-badge': 'Business',
     'biz-permit-new': 'Business Permit (New)',
     'biz-permit-new-desc': "Apply for a new mayor's permit to operate a business",
@@ -438,13 +438,13 @@ const translations = {
 
     // Government Page
     'gov-title': 'Government Structure & Officials',
-    'gov-subtitle': 'Meet the leadership and offices serving Solano',
+    'gov-subtitle': 'Meet the leadership and offices serving Hilongos',
     'gov-executive': 'Executive Branch',
     'gov-sb-members': 'Sangguniang Bayan Members',
-    'gov-sb-subtitle': 'Municipal Councilors serving the people of Solano',
+    'gov-sb-subtitle': 'Municipal Councilors serving the people of Hilongos',
     'gov-departments': 'Department Heads & Key Offices',
     'gov-dept-subtitle': 'Municipal offices providing services to citizens',
-    'gov-barangays': 'Barangays of Solano',
+    'gov-barangays': 'Barangays of Hilongos',
     'gov-barangays-count': '22 Barangays serving our community',
     'gov-organizational-chart': 'Organizational Chart',
     'gov-term': 'Term',
@@ -545,7 +545,7 @@ const translations = {
 
     // News Page
     'news-title': 'News & Announcements',
-    'news-subtitle': 'Latest updates from the Municipality of Solano',
+    'news-subtitle': 'Latest updates from the Municipality of Hilongos',
     'news-latest': 'Latest News',
     'news-announcements': 'Announcements',
     'news-events': 'Events',
@@ -659,10 +659,10 @@ const translations = {
     'a11y-all-functionality-available-using-only-a-keyboard':
       'All functionality available using only a keyboard.',
     'a11y-all-images-have-descriptive-alt-text': 'All images have descriptive alt text.',
-    'a11y-better-solano-is-committed-to-ensuring-digital':
-      'Better Solano is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.',
-    'a11y-better-solano-is-committed-to-ensuring-that-our':
-      'Better Solano is committed to ensuring that our digital services are accessible to all citizens, regardless of ability. We view accessibility not as a feature, but as a fundamental right.',
+    'a11y-better-Hilongos-is-committed-to-ensuring-digital':
+      'Better Hilongos is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.',
+    'a11y-better-Hilongos-is-committed-to-ensuring-that-our':
+      'Better Hilongos is committed to ensuring that our digital services are accessible to all citizens, regardless of ability. We view accessibility not as a feature, but as a fundamental right.',
     'a11y-blgf-portal': 'BLGF Portal',
     'a11y-business': 'Business',
     'a11y-certificates': 'Certificates',
@@ -673,8 +673,8 @@ const translations = {
     'a11y-conformant': 'Conformant',
     'a11y-css3': 'CSS3',
     'a11y-education': 'Education',
-    'a11y-empowering-the-people-of-solano-with-transparent':
-      'Empowering the people of Solano with transparent access to the services, programs, and public funds of LGU Solano.',
+    'a11y-empowering-the-people-of-hilongos-with-transparent':
+      'Empowering the people of Hilongos with transparent access to the services, programs, and public funds of LGU Solano.',
     'a11y-environment': 'Environment',
     'a11y-freedom-of-information': 'Freedom of Information',
     'a11y-health': 'Health',
@@ -6449,9 +6449,9 @@ const translations = {
     'terms-solano-quiz': 'Solano Quiz',
     'treas-solano-quiz': 'Solano Quiz',
     'tricycle-solano-quiz': 'Solano Quiz',
-    'home-how-well-do-you-know-solano-nueva-vizcaya': 'How well do you know Solano, Nueva Vizcaya?',
+    'home-how-well-do-you-know-hilongos-leyte': 'How well do you know Hilongos, Leyte?',
     'home-evaluate-your-familiarity-with-the-municipalitys':
-      "Evaluate your familiarity with the municipality\'s heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Nueva Vizcaya\'s most prominent localities.",
+      "Evaluate your familiarity with the municipality\'s heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Leyte\'s most prominent localities.",
     'home-take-the-quiz': 'Take the Quiz',
   },
 
