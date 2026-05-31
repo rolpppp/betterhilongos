@@ -169,6 +169,248 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <style>
+      .bc-section {
+        padding: 40px 0;
+      }
+      .bc-section.alt-bg {
+        background: var(--color-bg-alt);
+      }
+      .section-header {
+        margin-bottom: 20px;
+      }
+      .section-header h2 {
+        font-size: 1.125rem;
+        color: var(--color-text);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .section-header h2 i {
+        color: var(--color-primary);
+        font-size: 1rem;
+      }
+      .section-header p {
+        color: var(--color-text-light);
+        font-size: 0.8125rem;
+        margin: 0;
+      }
+      .quick-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .stat-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+      }
+      .stat-card i {
+        font-size: 1rem;
+        color: var(--color-primary);
+        margin-bottom: 4px;
+      }
+      .stat-card h4 {
+        font-size: 0.625rem;
+        color: var(--color-text-light);
+        margin-bottom: 2px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      .stat-card p {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin: 0;
+      }
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .process-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .process-card .step-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        background: var(--color-primary);
+        color: white;
+        font-size: 0.625rem;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-bottom: 8px;
+      }
+      .process-card h4 {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 4px;
+      }
+      .process-card p {
+        font-size: 0.6875rem;
+        color: var(--color-text-light);
+        margin-bottom: 0;
+        line-height: 1.4;
+      }
+      .process-card.final .step-num {
+        background: var(--color-success);
+      }
+      .req-box {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+      }
+      .req-box h4 {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .req-box h4 i {
+        color: var(--color-primary);
+      }
+      .req-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .req-list li {
+        font-size: 0.75rem;
+        color: var(--color-text);
+        padding: 4px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+      }
+      .req-list li i {
+        color: var(--color-primary);
+        font-size: 0.625rem;
+        margin-top: 3px;
+        flex-shrink: 0;
+      }
+      .faq-item {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        margin-bottom: 8px;
+        overflow: hidden;
+      }
+      .faq-question {
+        padding: 12px 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+      }
+      .faq-question:hover {
+        background: rgba(0, 50, 160, 0.02);
+      }
+      .faq-question i {
+        color: var(--color-primary);
+        transition: transform 0.2s;
+      }
+      .faq-answer {
+        padding: 0 14px 12px;
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        display: none;
+      }
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+      .faq-item.active .faq-question i {
+        transform: rotate(180deg);
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 14px;
+      }
+      .sidebar-card {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        padding: 14px;
+        margin-bottom: 10px;
+      }
+      .sidebar-card h4 {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-text);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .sidebar-card h4 i {
+        color: var(--color-primary);
+      }
+      .sidebar-card p {
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        margin: 0 0 6px;
+      }
+      .sidebar-card a {
+        font-size: 0.75rem;
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+      .sidebar-card a:hover {
+        text-decoration: underline;
+      }
+      .sidebar-card .btn.btn-primary {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white !important;
+        font-weight: 500;
+        padding: 10px 16px;
+        border-radius: 6px;
+        background: var(--color-primary);
+      }
+      .sidebar-card .btn.btn-primary:hover {
+        text-decoration: none;
+        background: var(--color-primary-dark, #001a80);
+      }
+      @media (max-width: 992px) {
+        .process-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .quick-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 575px) {
+        .process-grid,
+        .quick-stats {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -380,7 +622,7 @@
             >
             <h1 data-i18n="bc-birth-certificate-local-copy">Birth Certificate (Local Copy)</h1>
             <p class="page-header-desc" data-i18n="bc-official-certified-copy-of-birth-certificate">
-              Official certified copy of birth certificate registered in Solano
+              Official certified copy of birth certificate registered in Hilongos
             </p>
           </div>
         </div>
@@ -393,7 +635,7 @@
             <div class="stat-card">
               <i class="bi bi-clock"></i>
               <h4 data-i18n="bc-processing">Processing</h4>
-              <p data-i18n="bc-1530-minutes">15-30 Minutes</p>
+              <p data-i18n="bc-1530-minutes">10-20 Minutes</p>
             </div>
             <div class="stat-card">
               <i class="bi bi-cash"></i>
@@ -429,30 +671,13 @@
           <div class="process-grid">
             <div class="process-card">
               <div class="step-num">1</div>
-              <h4 data-i18n="bc-check-eligibility">Check Eligibility</h4>
-              <p data-i18n="bc-you-can-request-if-you-are-the-owner">
-                You can request if you are the owner, parent/guardian, or authorized representative
-                with proper authorization letter.
+              <h4 data-i18n="bc-visit-civil-registrar">Visit Civil Registrar</h4>
+              <p data-i18n="bc-go-to-the-local-civil-registrar-office-at-2nd">
+                Go to the Local Civil Registrar Office (2nd Floor). Office hours: Mon-Fri, 8AM-5PM.
               </p>
             </div>
             <div class="process-card">
               <div class="step-num">2</div>
-              <h4 data-i18n="bc-prepare-documents">Prepare Documents</h4>
-              <p data-i18n="bc-bring-valid-governmentissued-id-if-representative">
-                Bring valid government-issued ID. If representative: authorization letter and IDs of
-                both owner and representative.
-              </p>
-            </div>
-            <div class="process-card">
-              <div class="step-num">3</div>
-              <h4 data-i18n="bc-visit-civil-registrar">Visit Civil Registrar</h4>
-              <p data-i18n="bc-go-to-the-local-civil-registrar-office-at-2nd">
-                Go to the Local Civil Registrar Office at 2nd Floor, Municipal Hall. Office hours:
-                Mon-Fri, 8AM-5PM.
-              </p>
-            </div>
-            <div class="process-card">
-              <div class="step-num">4</div>
               <h4 data-i18n="bc-fill-out-request-form">Fill Out Request Form</h4>
               <p data-i18n="bc-complete-the-request-form-with-full-name-date-of">
                 Complete the request form with full name, date of birth, place of birth, parents'
@@ -460,18 +685,31 @@
               </p>
             </div>
             <div class="process-card">
-              <div class="step-num">5</div>
+              <div class="step-num">3</div>
+              <h4 data-i18n="bc-review-data">Review data</h4>
+              <p data-i18n="bc-review-the-data-before-signing">
+                Review the data before signing to avoid discrepancies.
+              </p>
+            </div>
+            <div class="process-card">
+              <div class="step-num">4</div>
               <h4 data-i18n="bc-pay-the-fee">Pay the Fee</h4>
               <p data-i18n="bc-pay-150-per-certified-copy-at-the-municipal">
-                Pay ₱150 per certified copy at the Municipal Treasurer's Office (same building).
+                Pay ₱150 per certified copy at the cashier (1st Floor).
+              </p>
+            </div>
+            <div class="process-card">
+              <div class="step-num">5</div>
+              <h4 data-i18n="bc-wait-for-3-days">Wait for 3 days</h4>
+              <p data-i18n="bc-wait-for-3-days-cause-data-transcription">
+                Wait for 3 days, cause data transcription in the registry book and the code in CRIS.
               </p>
             </div>
             <div class="process-card final">
               <div class="step-num">6</div>
               <h4 data-i18n="bc-claim-certificate">Claim Certificate</h4>
               <p data-i18n="bc-return-to-civil-registrar-with-official-receipt">
-                Return to Civil Registrar with official receipt. Certificate released within 15-30
-                minutes if record is available.
+                Return to Civil Registrar and claim the certificate.
               </p>
             </div>
           </div>
@@ -501,7 +739,7 @@
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
                     <span data-i18n="bc-valid-governmentissued-id-original-photocopy"
-                      >Valid government-issued ID (original + photocopy)</span
+                      >Valid government-issued ID</span
                     >
                   </li>
                   <li>
@@ -522,20 +760,14 @@
                 <ul class="req-list">
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="bc-authorization-letter-signed-by-the-owner"
-                      >Authorization letter signed by the owner</span
+                    <span data-i18n="bc-valid-id-of-the-owner"
+                      >Valid ID of the owner</span
                     >
                   </li>
                   <li>
                     <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="bc-valid-id-of-the-owner-photocopy"
-                      >Valid ID of the owner (photocopy)</span
-                    >
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle-fill"></i>
-                    <span data-i18n="bc-valid-id-of-the-representative-original-photocopy"
-                      >Valid ID of the representative (original + photocopy)</span
+                    <span data-i18n="bc-valid-id-of-the-representative"
+                      >Valid ID of the representative</span
                     >
                   </li>
                   <li>
@@ -561,7 +793,7 @@
                   <i class="bi bi-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                  No. The Solano Civil Registrar only has records for births registered in Solano.
+                  No. The Hilongos Civil Registrar only has records for births registered in Hilongos.
                   For other municipalities, request from that municipality's Civil Registrar or from
                   PSA.
                 </div>
@@ -611,10 +843,10 @@
                   <span data-i18n="bc-office-information">Office Information</span>
                 </h4>
                 <p><strong data-i18n="bc-local-civil-registrar">Local Civil Registrar</strong></p>
-                <p data-i18n="bc-municipal-hall-2nd-floor-solano-nueva-vizcaya">
-                  Municipal Hall, 2nd Floor<br />Solano, Nueva Vizcaya
+                <p data-i18n="bc-municipal-hall-2nd-floor">
+                  Municipal Hall, 2nd Floor<br />Hilongos, Leyte
                 </p>
-                <p><i class="bi bi-telephone"></i> (078) 326-5001</p>
+                <p><i class="bi bi-telephone"></i>Telephone Number</p>
                 <p><i class="bi bi-clock"></i> Mon-Fri: 8AM - 5PM</p>
               </div>
               <div class="sidebar-card">

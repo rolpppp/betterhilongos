@@ -1091,22 +1091,19 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When property changes ownership through sale, donation, inheritance, or other means, the tax declaration must be transferred to the new owner's name.",
     'assessor-who-can-apply': 'Who Can Apply',
-    'bc-1530-minutes': '15-30 Minutes',
+    'bc-1530-minutes': '10-20 Minutes',
     'bc-accessibility': 'Accessibility',
     'bc-agriculture': 'Agriculture',
     'bc-appointment': 'Appointment',
-    'bc-authorization-letter-signed-by-the-owner': 'Authorization letter signed by the owner',
     'bc-barangay-clearance': 'Barangay Clearance',
     'bc-birth-certificate-local-copy': 'Birth Certificate (Local Copy)',
     'bc-blgf-portal': 'BLGF Portal',
-    'bc-bring-valid-governmentissued-id-if-representative':
-      'Bring valid government-issued ID. If representative: authorization letter and IDs of both owner and representative.',
-    'bc-business': 'Business',
+     'bc-business': 'Business',
     'bc-can-i-get-a-birth-certificate-registered-in':
       'Can I get a birth certificate registered in another municipality?',
     'bc-can-i-request-through-email-or-online': 'Can I request through email or online?',
     'bc-certificates': 'Certificates',
-    'bc-check-eligibility': 'Check Eligibility',
+    'bc-review-data': 'Review data',
     'bc-citizens-charter': "Citizen's Charter",
     'bc-claim-certificate': 'Claim Certificate',
     'bc-cmci-dti-portal': 'CMCI DTI Portal',
@@ -1130,7 +1127,7 @@ const translations = {
     'bc-freedom-of-information': 'Freedom of Information',
     'bc-frequently-asked-questions': 'Frequently Asked Questions',
     'bc-go-to-the-local-civil-registrar-office-at-2nd':
-      'Go to the Local Civil Registrar Office at 2nd Floor, Municipal Hall. Office hours: Mon-Fri, 8AM-5PM.',
+      'Go to the Local Civil Registrar Office (2nd Floor). Office hours: Mon-Fri, 8AM-5PM.',
     'bc-government': 'Government',
     'bc-health': 'Health',
     'bc-home': 'Home',
@@ -1140,21 +1137,20 @@ const translations = {
     'bc-legislative': 'Legislative',
     'bc-local-civil-registrar': 'Local Civil Registrar',
     'bc-marriage-certificate': 'Marriage Certificate',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Municipal Hall, 2nd Floor Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor':
+      'Municipal Hall, 2nd Floor Hilongos, Leyte',
     'bc-need-help': 'Need Help?',
     'bc-office-information': 'Office Information',
     'bc-official-certified-copy-of-birth-certificate':
-      'Official certified copy of birth certificate registered in Solano',
+      'Official certified copy of birth certificate registered in Hilongos',
     'bc-official-lgu-solano-portal': 'Official LGU Solano Portal',
     'bc-open-data-philippines': 'Open Data Philippines',
     'bc-ordinance-framework': 'Ordinance Framework',
     'bc-ownerrepresentative': 'Owner/Representative',
     'bc-pay-150-per-certified-copy-at-the-municipal':
-      "Pay ₱150 per certified copy at the Municipal Treasurer's Office (same building).",
+      "Pay ₱150 per certified copy at the cashier (1st Floor)",
     'bc-pay-the-fee': 'Pay the Fee',
     'bc-payment-150-cash-per-copy': 'Payment: ₱150 cash per copy',
-    'bc-prepare-documents': 'Prepare Documents',
     'bc-privacy-policy': 'Privacy Policy',
     'bc-processing': 'Processing',
     'bc-public-safety': 'Public Safety',
@@ -1163,8 +1159,11 @@ const translations = {
     'bc-requirements': 'Requirements',
     'bc-resolution-framework': 'Resolution Framework',
     'bc-resources': 'Resources',
+    'bc-wait-for-3-days': 'Wait for 3 days',
+    'bc-cause-data-transcription':
+      'Wait for 3 days, cause data transcription in the registry book and the code in CRIS.',
     'bc-return-to-civil-registrar-with-official-receipt':
-      'Return to Civil Registrar with official receipt. Certificate released within 15-30 minutes if record is available.',
+      'Return to Civil Registrar and claim the certificate.',
     'bc-sangguniang-bayan': 'Sangguniang Bayan',
     'bc-services': 'Services',
     'bc-sitemap': 'Sitemap',
@@ -1175,11 +1174,11 @@ const translations = {
     'bc-tax-payments': 'Tax Payments',
     'bc-terms-of-use': 'Terms of Use',
     'bc-transparency': 'Transparency',
-    'bc-valid-governmentissued-id-original-photocopy':
-      'Valid government-issued ID (original + photocopy)',
-    'bc-valid-id-of-the-owner-photocopy': 'Valid ID of the owner (photocopy)',
-    'bc-valid-id-of-the-representative-original-photocopy':
-      'Valid ID of the representative (original + photocopy)',
+    'bc-valid-governmentissued-id-original':
+      'Valid government-issued ID',
+    'bc-valid-id-of-the-owner': 'Valid ID of the owner',
+    'bc-valid-id-of-the-representative':
+      'Valid ID of the representative',
     'bc-visit-civil-registrar': 'Visit Civil Registrar',
     'bc-volunteer-with-us': 'Volunteer with us',
     'bc-what-if-i-dont-know-the-exact-date-of-birth':
@@ -1187,8 +1186,8 @@ const translations = {
     'bc-whats-the-difference-between-local-copy-and-psa':
       "What's the difference between local copy and PSA copy?",
     'bc-who-can-apply': 'Who Can Apply',
-    'bc-you-can-request-if-you-are-the-owner':
-      'You can request if you are the owner, parent/guardian, or authorized representative with proper authorization letter.',
+    'bc-review-the-data-before-signing':
+      'Review the data before signing to avoid discrepancies.',
     'biz-accessibility': 'Accessibility',
     'biz-agriculture': 'Agriculture',
     'biz-apply-for-a-new-business-permit-online': 'Apply for a new business permit online',
@@ -7481,23 +7480,21 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When ari-arian changes ownership through sale, donation, inheritance, or iba pang means, the buwis declaration must be transferred to the bago owner's name.",
     'assessor-who-can-apply': 'Sino ang Maaaring Mag-apply',
-    'bc-1530-minutes': '15-30 Minuto',
+    'bc-1530-minutes': '10-20 Minuto',
     'bc-accessibility': 'Aksesibilidad',
     'bc-agriculture': 'Agrikultura',
     'bc-appointment': 'Appointment',
-    'bc-authorization-letter-signed-by-the-owner': 'Liham ng awtorisasyon na nilagdaan ng may-ari',
     'bc-barangay-clearance': 'Barangay Clearance',
     'bc-birth-certificate-local-copy': 'Sertipiko ng Kapanganakan (Lokal na Kopya)',
     'bc-blgf-portal': 'BLGF Portal',
-    'bc-bring-valid-governmentissued-id-if-representative':
-      'Dalhin balido government-issued ID. If kinatawan: authorization sulat and IDs of both may-ari and kinatawan.',
     'bc-business': 'Negosyo',
     'bc-can-i-get-a-birth-certificate-registered-in':
       'Maaari ko bang makuha ang sertipiko ng kapanganakan na nakarehistro sa ibang munisipalidad?',
     'bc-can-i-request-through-email-or-online':
       'Maaari ba akong humiling sa pamamagitan ng email o online?',
     'bc-certificates': 'Mga Sertipiko',
-    'bc-check-eligibility': 'Suriin ang Pagiging Kwalipikado',
+    'bc-review-data': 'Review data',
+    'bc-wait-for-3-days': 'Maghitay ng tatlong araw',
     'bc-citizens-charter': "Citizen's Charter",
     'bc-claim-certificate': 'Kunin ang Sertipiko',
     'bc-cmci-dti-portal': 'CMCI DTI Portal',
@@ -7532,8 +7529,8 @@ const translations = {
     'bc-legislative': 'Lehislatura',
     'bc-local-civil-registrar': 'Lokal na Tagapagrehistro Sibil',
     'bc-marriage-certificate': 'Sertipiko ng Kasal',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipyo, Ikalawang Palapag Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor':
+      'Munisipyo, Ikalawang Palapag Hilongos, Leyte',
     'bc-need-help': 'Kailangan Tulong?',
     'bc-office-information': 'Impormasyon ng Opisina',
     'bc-official-certified-copy-of-birth-certificate':
@@ -7546,7 +7543,6 @@ const translations = {
       'Magbayad ng ₱150 bawat sertipikadong kopya sa Opisina ng Ingat-Yaman ng Munisipyo (parehong gusali).',
     'bc-pay-the-fee': 'Magbayad ng Bayarin',
     'bc-payment-150-cash-per-copy': 'Pagbabayad: ₱150 cash bawat kopya',
-    'bc-prepare-documents': 'Ihanda ang mga Dokumento',
     'bc-privacy-policy': 'Patakaran sa Pagkapribado',
     'bc-processing': 'Pagproseso',
     'bc-public-safety': 'Kaligtasang Pampubliko',
@@ -7567,11 +7563,11 @@ const translations = {
     'bc-tax-payments': 'Pagbabayad ng Buwis',
     'bc-terms-of-use': 'Mga Tuntunin ng Paggamit',
     'bc-transparency': 'Transparensiya',
-    'bc-valid-governmentissued-id-original-photocopy':
+    'bc-valid-governmentissued-id-original':
       'Balidong ID mula sa pamahalaan (orihinal + photocopy)',
-    'bc-valid-id-of-the-owner-photocopy': 'Balidong ID ng may-ari (photocopy)',
-    'bc-valid-id-of-the-representative-original-photocopy':
-      'Balidong ID ng kinatawan (orihinal + photocopy)',
+    'bc-valid-id-of-the-owner': 'Balidong ID ng may-ari',
+    'bc-valid-id-of-the-representative':
+      'Balidong ID ng kinatawan',
     'bc-visit-civil-registrar': 'Pumunta sa Civil Registrar',
     'bc-volunteer-with-us': 'Mag-volunteer sa amin',
     'bc-what-if-i-dont-know-the-exact-date-of-birth':
@@ -7579,7 +7575,9 @@ const translations = {
     'bc-whats-the-difference-between-local-copy-and-psa':
       "What's ang difference sa pagitan ng lokal na copy sa PSA copy?",
     'bc-who-can-apply': 'Sino ang Maaaring Mag-apply',
-    'bc-you-can-request-if-you-are-the-owner':
+    'bc-review-the-data-before-signing':
+      'Review the data before signing to avoid discrepancies.',
+    'bc-cause-data-transcription':
       'Ikaw maaaring request kung ikaw ay ang owner, parent/guardian, o awtorisadong representative na maaari proper awtorisasyon letter.',
     'biz-accessibility': 'Aksesibilidad',
     'biz-agriculture': 'Agrikultura',
@@ -13945,23 +13943,21 @@ const translations = {
     'assessor-when-property-changes-ownership-through-sale':
       "When kukua changes ownership through sale, donation, inheritance, or sabali means, the buwis declaration must be transferred to the baro owner's name.",
     'assessor-who-can-apply': 'Sino ti Mabalin nga Ag-apply',
-    'bc-1530-minutes': '15-30 Minuto',
+    'bc-1530-minutes': '10-20 Minuto',
     'bc-accessibility': 'Aksesibilidad',
     'bc-agriculture': 'Agrikultura',
     'bc-appointment': 'Appointment',
-    'bc-authorization-letter-signed-by-the-owner': 'Surat ti awtorisasion a pinirmaan ti akinkukua',
     'bc-barangay-clearance': 'Barangay Clearance',
     'bc-birth-certificate-local-copy': 'Sertipiko ti Pannakayanak (Lokal a Kopia)',
     'bc-blgf-portal': 'BLGF Portal',
-    'bc-bring-valid-governmentissued-id-if-representative':
-      'Iyeg balido government-issued ID. If pannakabagi: authorization surat and IDs of both akinkukua and pannakabagi.',
     'bc-business': 'Negosio',
     'bc-can-i-get-a-birth-certificate-registered-in':
       'Mabalin kadi nga alaek ti sertipiko ti pannakayanak a nakarehistro iti sabali a munisipalidad?',
     'bc-can-i-request-through-email-or-online':
       'Mabalin kadi nga agdawat babaen ti email wenno online?',
     'bc-certificates': 'Dagiti Sertipiko',
-    'bc-check-eligibility': 'Kitaen ti Kualipikasion',
+    'bc-review-data': 'Review data',
+    'bc-wait-for-3-days': 'Kitaen ti Kualipikasion',
     'bc-citizens-charter': "Citizen's Charter",
     'bc-claim-certificate': 'Alaen ti Sertipiko',
     'bc-cmci-dti-portal': 'CMCI DTI Portal',
@@ -13996,8 +13992,8 @@ const translations = {
     'bc-legislative': 'Lehislatura',
     'bc-local-civil-registrar': 'Lokal a Civil Registrar',
     'bc-marriage-certificate': 'Sertipiko ti Kasar',
-    'bc-municipal-hall-2nd-floor-solano-nueva-vizcaya':
-      'Munisipalidad, Maikadua a Kadsaaran Solano, Nueva Vizcaya',
+    'bc-municipal-hall-2nd-floor':
+      'Munisipyo, Ikalawang Palapag Hilongos, Leyte',
     'bc-need-help': 'Kasapulan Tulong?',
     'bc-office-information': 'Impormasion ti Opisina',
     'bc-official-certified-copy-of-birth-certificate':
@@ -14010,7 +14006,6 @@ const translations = {
       'Agbayad ti ₱150 tunggal sertipikado a kopia iti Opisina ti Tesorero ti Munisipalidad (isu met laeng a pasdek).',
     'bc-pay-the-fee': 'Bayadan ti Bayad',
     'bc-payment-150-cash-per-copy': 'Panagbayad: ₱150 cash tunggal kopia',
-    'bc-prepare-documents': 'Isaganam dagiti Dokumento',
     'bc-privacy-policy': 'Pagannurotan ti Pagkapribado',
     'bc-processing': 'Panagproseso',
     'bc-public-safety': 'Kaligtasan Pampubliko',
@@ -14031,11 +14026,11 @@ const translations = {
     'bc-tax-payments': 'Panagbayad ti Buwis',
     'bc-terms-of-use': 'Dagiti Kondision ti Panagusar',
     'bc-transparency': 'Transparensiya',
-    'bc-valid-governmentissued-id-original-photocopy':
+    'bc-valid-governmentissued-id-original':
       'Balido nga ID manipud iti gobierno (orihinal + photocopy)',
-    'bc-valid-id-of-the-owner-photocopy': 'Balido nga ID ti akinkukua (photocopy)',
-    'bc-valid-id-of-the-representative-original-photocopy':
-      'Balido nga ID ti pannakabagi (orihinal + photocopy)',
+    'bc-valid-id-of-the-owner': 'Balido nga ID ti akinkukua',
+    'bc-valid-id-of-the-representative':
+      'Balido nga ID ti pannakabagi',
     'bc-visit-civil-registrar': 'Bisitaen ti Civil Registrar',
     'bc-volunteer-with-us': 'Ag-volunteer kadakami',
     'bc-what-if-i-dont-know-the-exact-date-of-birth':
@@ -14043,7 +14038,9 @@ const translations = {
     'bc-whats-the-difference-between-local-copy-and-psa':
       "What's ti difference iti pagitan ti lokal na copy iti PSA copy?",
     'bc-who-can-apply': 'Sino ti Mabalin nga Ag-apply',
-    'bc-you-can-request-if-you-are-the-owner':
+    'bc-review-the-data-before-signing':
+      'Review the data before signing to avoid discrepancies.',
+    'bc-cause-data-transcription':
       'Ikaw maaaring request no ikaw ay ti owner, parent/guardian, wenno awtorisadong representative na maaari proper awtorisasyon letter.',
     'biz-accessibility': 'Aksesibilidad',
     'biz-agriculture': 'Agrikultura',

@@ -3,7 +3,7 @@
   "version": "1.1.15",
   "description": "BetterHilongos.org - Official Portal for LGU Hilongos",
   "scripts": {
-    "dev": "python3 -m http.server 8888",
+    "dev": "python serve.py -d . -p 8888",
     "build": "bash build.sh",
     "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
