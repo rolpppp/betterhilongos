@@ -1,6 +1,6 @@
 /**
- * Weather & Map Section for Better Solano Homepage
- * Displays real-time weather data and interactive map of Solano, Nueva Vizcaya
+ * Weather & Map Section for Better Hilongos Homepage
+ * Displays real-time weather data and interactive map of Hilongos, Leyte
  * With robust fallback system to ensure content always renders
  */
 
@@ -9,6 +9,74 @@
   'use strict';
 
   console.log('=== weather-map.js: Script loading started ===');
+
+  // ============================================================================
+  // Inject Map Styles for Better Aesthetics
+  // ============================================================================
+  (function injectMapStyles() {
+    if (document.getElementById('weather-map-styles')) return;
+    
+    const style = document.createElement('style');
+    style.id = 'weather-map-styles';
+    style.textContent = `
+      /* Map container styling */
+      #map-container {
+        background: linear-gradient(135deg, #f0f4f8 0%, #e8f1f8 100%);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 50, 160, 0.08);
+      }
+
+      /* Custom marker styling */
+      .custom-marker {
+        filter: drop-shadow(0 2px 4px rgba(0, 50, 160, 0.15));
+      }
+
+      /* Map popup styling */
+      .map-popup .leaflet-popup-content {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: #0032a0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 50, 160, 0.15);
+      }
+
+      .map-popup .leaflet-popup-content-wrapper {
+        background-color: white;
+        border: 2px solid #0032a0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 50, 160, 0.15);
+      }
+
+      .map-popup .leaflet-popup-tip {
+        background-color: white;
+        border-top-color: #0032a0;
+      }
+
+      /* Tile layer styling */
+      .map-tiles {
+        /* CartoDB Positron Light - clean and professional */
+      }
+
+      /* Leaflet control styling */
+      .leaflet-control-zoom a {
+        background-color: white;
+        color: #0032a0;
+        border: 1px solid #e0e7f1;
+        font-weight: 600;
+      }
+
+      .leaflet-control-zoom a:hover {
+        background-color: #f0f4f8;
+        border-color: #0032a0;
+        color: #0032a0;
+      }
+
+      .leaflet-control-zoom-out:disabled {
+        display: none;
+      }
+    `;
+    document.head.appendChild(style);
+  })();
 
   // ============================================================================
   // Mock/Fallback Data - Always available static data
@@ -60,10 +128,10 @@
   // Weather Service - Handles fetching, caching, and providing weather data
   // ============================================================================
   const WeatherService = {
-    CACHE_KEY: 'solano_weather_cache',
+    CACHE_KEY: 'hilongos_weather_cache',
     CACHE_TTL: 30 * 60 * 1000,
     API_URL: 'https://api.open-meteo.com/v1/forecast',
-    COORDINATES: { lat: 16.5167, lon: 121.1833 },
+    COORDINATES: { lat: 10.37333, lon: 124.74870 },
 
     mapWeatherCode(code) {
       const mappings = {
@@ -76,13 +144,27 @@
         51: { condition: 'Light drizzle', icon: 'bi-cloud-drizzle-fill' },
         53: { condition: 'Moderate drizzle', icon: 'bi-cloud-drizzle-fill' },
         55: { condition: 'Dense drizzle', icon: 'bi-cloud-drizzle-fill' },
+        56: { condition: 'Freezing drizzle', icon: 'bi-cloud-hail' },
+        57: { condition: 'Dense freezing drizzle', icon: 'bi-cloud-hail' },
         61: { condition: 'Slight rain', icon: 'bi-cloud-rain-fill' },
         63: { condition: 'Moderate rain', icon: 'bi-cloud-rain-fill' },
         65: { condition: 'Heavy rain', icon: 'bi-cloud-rain-heavy-fill' },
-        80: { condition: 'Rain showers', icon: 'bi-cloud-rain-fill' },
+        66: { condition: 'Freezing rain', icon: 'bi-cloud-sleet-fill' },
+        67: { condition: 'Heavy freezing rain', icon: 'bi-cloud-sleet-fill' },
+        71: { condition: 'Light snow', icon: 'bi-cloud-snow-fill' },
+        73: { condition: 'Moderate snow', icon: 'bi-cloud-snow-fill' },
+        75: { condition: 'Heavy snow', icon: 'bi-cloud-snow-fill' },
+        77: { condition: 'Snow grains', icon: 'bi-cloud-snow-fill' },
+        80: { condition: 'Slight rain showers', icon: 'bi-cloud-rain-fill' },
+        81: { condition: 'Moderate rain showers', icon: 'bi-cloud-rain-heavy-fill' },
+        82: { condition: 'Violent rain showers', icon: 'bi-cloud-rain-heavy-fill' },
+        85: { condition: 'Slight snow showers', icon: 'bi-cloud-snow-fill' },
+        86: { condition: 'Heavy snow showers', icon: 'bi-cloud-snow-fill' },
         95: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
+        96: { condition: 'Thunderstorm with hail', icon: 'bi-cloud-lightning-rain-fill' },
+        99: { condition: 'Severe thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
       };
-      return mappings[code] || { condition: 'Partly cloudy', icon: 'bi-cloud-sun-fill' };
+      return mappings[code] || { condition: 'Unknown', icon: 'bi-cloud-fill' };
     },
 
     cacheWeather(data) {
@@ -253,7 +335,7 @@
           : '<span style="font-size:0.65rem;color:#06a77d;margin-left:4px;" title="Live data from Open-Meteo API">●</span>';
 
         container.innerHTML = `
-                <div class="weather-widget" role="region" aria-label="Current weather in Solano">
+                <div class="weather-widget" role="region" aria-label="Current weather in Hilongos">
                     <div class="weather-current">
                         <div class="weather-current-icon" aria-hidden="true">
                             <i class="bi ${data.icon}"></i>
@@ -262,7 +344,7 @@
                             <div class="weather-current-temp" aria-label="Temperature ${data.temperature} degrees Celsius">${data.temperature}°C</div>
                             <div class="weather-current-condition" aria-label="Condition: ${data.condition}">${data.condition}${dataSourceBadge}</div>
                             <div class="weather-current-location">
-                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Solano, Nueva Vizcaya
+                                <i class="bi bi-geo-alt" aria-hidden="true"></i> Hilongos, Leyte
                             </div>
                         </div>
                     </div>
@@ -336,7 +418,7 @@
   // Map Component - Initializes and manages the Leaflet map
   // ============================================================================
   const MapComponent = {
-    SOLANO_CENTER: [16.5167, 121.1833],
+    SOLANO_CENTER: [10.37333, 124.74870],
     DEFAULT_ZOOM: 14,
     map: null,
 
@@ -404,9 +486,9 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=124.70870%2C10.33333%2C124.78870%2C10.41333&layer=mapnik&marker=10.37333%2C124.74870"
                 style="border:0;display:block;"
-                title="Map of Solano, Nueva Vizcaya"
+                title="Map of Hilongos, Leyte"
                 loading="lazy">
             </iframe>
         `;
@@ -420,26 +502,38 @@
         // Clear any existing content
         container.innerHTML = '';
 
-        // Create the map with keyboard navigation support (Requirement 5.4)
+        // Create the map with keyboard navigation support and zoom constraints
         this.map = L.map(container, {
           center: this.SOLANO_CENTER,
           zoom: this.DEFAULT_ZOOM,
+          minZoom: 13,
+          maxZoom: 16,
           scrollWheelZoom: false,
           zoomControl: true,
           keyboard: true,
           keyboardPanDelta: 80,
         });
 
-        // Add tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Add CartoDB Positron Light tile layer (clean, blue & white aesthetic)
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          maxZoom: 19,
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          maxZoom: 16,
+          className: 'map-tiles'
         }).addTo(this.map);
 
+        // Create custom blue marker matching website color palette
+        const blueIcon = L.divIcon({
+          html: `<div style="background-color: #0032a0; width: 32px; height: 32px; border-radius: 50% 50% 50% 0; border: 3px solid white; box-shadow: 0 2px 8px rgba(0, 50, 160, 0.3); transform: rotate(-45deg);"></div>`,
+          iconSize: [32, 32],
+          className: 'custom-marker'
+        });
+
         // Add marker
-        const marker = L.marker(this.SOLANO_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Solano Municipal Hall</strong><br>Nueva Vizcaya 3708');
+        const marker = L.marker(this.SOLANO_CENTER, { icon: blueIcon }).addTo(this.map);
+        marker.bindPopup('<div style="font-weight: 600; color: #0032a0;"><strong>Hilongos Municipal Hall</strong><br>Leyte 6524</div>', {
+          className: 'map-popup'
+        });
 
         container.setAttribute('data-map-loaded', 'leaflet');
 

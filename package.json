@@ -1,13 +1,13 @@
 {
-  "name": "bs-web",
+  "name": "bh-web",
   "version": "1.1.15",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "description": "BetterHilongos.org - Official Portal for LGU Hilongos",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8888",
     "build": "bash build.sh",
     "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
-    "serve": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8888",
     "serve:dist": "cd dist && python3 -m http.server 8080",
     "version:major": "node scripts/bump-version.js major",
     "version:minor": "node scripts/bump-version.js minor",
@@ -18,12 +18,12 @@
     "format:check": "prettier --check ."
   },
   "keywords": [
-    "solano",
-    "nueva-vizcaya",
+    "hilongos",
+    "leyte",
     "government",
     "lgu"
   ],
-  "author": "Ramon Logan Jr.",
+  "author": "Rolf Genree Garces",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.23.9",
