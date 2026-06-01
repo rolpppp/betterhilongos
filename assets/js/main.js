@@ -149,57 +149,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hotline Marquee (tablet + mobile)
   var initHotlineMarquee = function () {
-    var isTabletOrBelow = function () {
-      return window.matchMedia('(max-width: 1024px)').matches;
-    };
     var hotlineItems = document.querySelector('.hotline-items');
-    if (!hotlineItems) return;
+    if (!hotlineItems || hotlineItems.querySelector('.hotline-items-track')) return;
 
-    var track = null;
     var originalItems = Array.from(hotlineItems.children);
+    if (!originalItems.length) return;
 
-    var buildMarquee = function () {
-      if (!isTabletOrBelow() || track) return;
-      track = document.createElement('div');
-      track.className = 'hotline-items-track';
-      track.setAttribute('aria-label', 'Emergency contacts scrolling');
-      while (hotlineItems.firstChild) {
-        track.appendChild(hotlineItems.firstChild);
-      }
-      originalItems.forEach(function (item) {
-        var clone = item.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        clone.setAttribute('tabindex', '-1');
-        track.appendChild(clone);
-      });
-      hotlineItems.appendChild(track);
-    };
+    var track = document.createElement('div');
+    track.className = 'hotline-items-track';
+    track.setAttribute('aria-label', 'Emergency contacts scrolling');
 
-    var destroyMarquee = function () {
-      if (!track) return;
-      while (hotlineItems.firstChild) {
-        hotlineItems.removeChild(hotlineItems.firstChild);
-      }
-      originalItems.forEach(function (item) {
-        hotlineItems.appendChild(item);
-      });
-      track = null;
-    };
+    var firstGroup = document.createElement('div');
+    firstGroup.className = 'hotline-items-group';
 
-    var handleResize = function () {
-      if (isTabletOrBelow()) {
-        buildMarquee();
-      } else {
-        destroyMarquee();
-      }
-    };
-
-    handleResize();
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(handleResize, 150);
+    originalItems.forEach(function (item) {
+      firstGroup.appendChild(item);
     });
+
+    var secondGroup = document.createElement('div');
+    secondGroup.className = 'hotline-items-group';
+    secondGroup.setAttribute('aria-hidden', 'true');
+
+    originalItems.forEach(function (item) {
+      var clone = item.cloneNode(true);
+      clone.setAttribute('tabindex', '-1');
+      secondGroup.appendChild(clone);
+    });
+
+    track.appendChild(firstGroup);
+    track.appendChild(secondGroup);
+
+    hotlineItems.innerHTML = '';
+    hotlineItems.appendChild(track);
   };
 
   initHotlineMarquee();
